@@ -1,47 +1,28 @@
-html { height: 100%; }
-
-body { 
-  background: #333; 
-  text-align: center;
-  min-height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-h1 { font-size: 20vw; }
-
-.linear-wipe {
-  text-align: center;
-  
-  background: linear-gradient(to right, #FFF 20%, rgb(150, 150, 98) 40%, rgb(10, 10, 0) 60%, rgb(145, 75, 75) 80%);
-  background-size: 200% auto;
-  
-  color: #000;
-  background-clip: text;
-  text-fill-color: transparent;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  
-  animation: shine 1s linear infinite;
-  @keyframes shine {
-    to {
-      background-position: 200% center;
-    }
-  }
-}
-
 div {
   width: 100px;
   height: 100px;
-  background-color: red;
-  animation-name: example;
+  background-color: rgb(0, 0, 0);
+  position: relative;
+  animation-name: box;
   animation-duration: 4s;
+
 }
 
-@keyframes example {
-  0%   {background-color: red;}
-  25%  {background-color: yellow;}
-  50%  {background-color: blue;}
-  100% {background-color: green;}
+@keyframes box {
+  0%   {background-color:red; left:0px; top:0px;}
+  10%  {background-color: purple; left: 20px; top: 5px;}
+  25%  {background-color:yellow; left:40px; top:10px;}
+  30%  {background-color: aqua; left: 400px; top: 100px;}
+  40%  {background-color: coral; left: 500px; top: 300px;}
+  50%  {background-color:blue; left:600px; top:700px;}
+  60%  {background-color: darkred; left: 550px; top 400px;}
+  75%  {background-color:green; left:30px; top:200px;}
+  100% {background-color:red; left:0px; top:0px;}
+}
+
+@keyframes circle {
+  0% {background-color: aliceblue; left: 0px; top: 0px;}
+  5% {background-color: aqua; left: 10px; top 5px;}
+  10% {background-color: aquamarine; 50px; top 45px;}
+  
 }
